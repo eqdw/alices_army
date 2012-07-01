@@ -5,6 +5,7 @@ var private = {};
 
 var onRequest = function(request, response){
   var url = URL.parse(request.url);
+  route(url);
   response.writeHead(200, {"Content-Type": "text/plain"});
   response.write("Hello, World!");
   response.write("Path: " + url.path);
